@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+    <style>
+table,tr,td {
+    border: 3px solid;
+    border-collapse:collapse
+}
+        </style>
+</head>
+<body>
+    <form id="myform">
+    <table>
+        <caption> HTML Form</caption>
+        <tr>
+            <td> 
+                <label for="username">username</label>
+                   <input type="text" name="username" id="username">
+            </td>
+            <td> 
+                 <label for="password">password</label>
+            <input type="password" name="password" id="password">
+           </td>
+            </tr>
+           <tr>
+             <td>
+                <input type="radio" value="HTML" name="lang" id="html">
+                <label for="html">html</label><BR>
+                <input type="radio" value="CSS" name="lang" id="css">
+                <label for="css">CSS</label><BR>
+                <input type="radio" value="class X" name="lang" id="javascript">
+                <label for="javascript">javascript</label>
+            </td>
+                <td>
+                   <input type="checkbox" value="bike" name="lang1" id="bike">
+                   <label for="bike">i have a bike</label><BR>
+                   <input type="checkbox" value="car" name="lang1" id="car">
+                   <label for="car">i have a car</label><BR>
+                   <input type="checkbox" value="boat" name="lang1" id="boat">
+                   <label for="boat">i have a boat</label>
+               </td>
+               </tr>
+               <tr>
+                <td>
+                    <label for="color">select your favourite color</label>
+                    <input type="color" name="color" id="color">
+                    </td>
+               <td>
+                <label for="birthday">birthday</label>
+                <input type="date" name="bod" id="birthday">
+                </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">email</label>
+                <input type="email" name="email" id="email">
+                    </td>
+                    <td>
+                        <label for="file">file</label>
+                        <input type="file" name="file" id="file">
+                     </td>
+                     </tr>
+                     <tr>
+                        <td>
+                            <label for="month">month</label>
+                            <input type="month" name="month" id="month">
+                            </td>
+                            <td>
+                                <label for="week">week</label>
+                                <input type="week" name="week" id="week">
+                     </tr>
+                     <tr>
+                        <td>
+                            <label for="time">time</label>
+                            <input type="time" name="time" id="time">
+                            </td>
+                            <td>
+                                <label for="phone no.">enter your phone no.</label>
+                                <input type="tel" name="phone no." id="phone no.">
+                                </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="homepage">add your homepage</label>
+                                        <input type="url" name="homepage" id="homepage">
+                                        </td>
+                                        <td>
+                                            <label for="quantity">quantity between 1 to 5</label>
+                                            <input type="number" name="quantity" id="quantity">
+                                            </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" ; align="center">
+                                                    <input type="submit">
+                                                    <input type="reset">
+                                                    <button type="button" onclick="displayvalues()">click me</button>
+                                                </td>
+                                                </tr>
+
+        </table>
+        </form>
+<script>
+    function displayvalues() {
+             x =document.getElementById("myform");
+             data=new FormData(x)
+             alert("email:" + data.get("email"))
+    }
+    </script>
+    </body>
+</html>

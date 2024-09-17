@@ -1,0 +1,29 @@
+html{
+    background-color: green;
+}
+.header{font-family: 'Sofia', cursive;
+    font-size: 24px;
+    color: rgb(255,200,205);
+    text-align:center;
+    text-shadow: 4px 8px 10px rgb(255,200,205);
+    text-indent:50%;
+    text-transform:capitalize;
+}
+.title{
+    font-family: 'Trirong', cursive;
+    font-size: 40px;
+    color:rgb(0,184,205);
+    text-align:center;
+    text-shadow: 4px 8px 10px rgb(0,184,205);
+    text-indent:-50%;
+    text-transform:lowercase;
+}
+.message{
+    font-family: 'Audiowide', cursive;
+    font-size: 40px;
+    color:rgb(255,0,0);
+    text-align:center;
+    text-shadow: 4px 8px 10px rgb(255,0,0);
+    text-indent:0%;
+    text-transform:uppercase;
+}

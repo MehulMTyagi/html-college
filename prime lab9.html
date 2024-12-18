@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number Finder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prime Number Finder</h1>
+    <input type="number" id="limit" placeholder="Enter a number" min="1">
+    <button onclick="findPrimes()">Find Primes</button>
+
+    <script>
+        function findPrimes() {
+            const limit = document.getElementById('limit').value;
+            
+            if (limit <= 1) {
+                alert("Please enter a number greater than 1.");
+                return;
+            }
+
+            const primes = [];
+            for (let i = 2; i <= limit; i++) {
+                let isPrime = true;
+                for (let j = 2; j < i; j++) {
+                    if (i % j === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (isPrime) {
+                    primes.push(i);
+                }
+            }
+
+            alert(`Prime numbers up to ${limit}: ${primes}`);
+        }
+    </script>
+</body>
+</html>

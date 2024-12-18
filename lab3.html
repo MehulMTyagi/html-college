@@ -17,8 +17,8 @@ table,tr,td {
         <caption> HTML Form</caption>
         <tr>
             <td> 
-                <label for="username">username</label>
-                   <input type="text" name="username" id="username">
+                <label for="username2">username</label>
+                   <input type="text" name="username1" id="username2">
             </td>
             <td> 
                  <label for="password">password</label>
@@ -106,7 +106,7 @@ table,tr,td {
     function displayvalues() {
              x =document.getElementById("myform");
              data=new FormData(x)
-             alert("email:" + data.get("email"))
+             alert("username:" + data.get("username1"))
     }
     </script>
     </body>

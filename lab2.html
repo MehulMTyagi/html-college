@@ -10,12 +10,13 @@
 }
 
        table {              
-              background-color: #D6EEEE;
+              background-color: blue;
               width: 70%;
               height: 50%
 }
       
              body {background-color:#333;}
+             #first-row {visibility: none;}
 </style>
 </head>
 <body>
@@ -70,13 +71,14 @@
 </table>
 <script>
      function showhide() {
-     row=document.getElementById("first-row"); 
-     if(row.style.display==="none"){
-	row.style.display="";
-	}else{
-	row.style.display="none";
-}   
-}
+          row = document.getElementById("first-row");
+          if (row.style.visibility === "visible") {
+               row.style.visibility = "hidden";
+          } 
+          else {
+               row.style.visibility = "visible";
+          }
+     }
 </script>
 </body>
 </html>

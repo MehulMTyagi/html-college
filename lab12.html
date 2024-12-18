@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Converter</title>
+</head>
+<body>
+    <h1>Binary Converter</h1><br>
+    <div>
+        <p>
+            Input number <input type="number" id="inputString">
+            <button onclick="Getbinary()">Get Binary</button>
+        </p>
+    </div>
+    <div id="result"></div>
+    <script>
+        function Getbinary() {
+            var num = document.getElementById("inputString").value;
+            document.getElementById("result").innerHTML =Number(num).toString(2); //tostring() used to convert decimal to any no. system
+            // document.getElementById("result").innerHTML = parseInt(num, 2);    // parseInt() used to convert any no. system to decimal 
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Selectors Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: #4682B4;
+        }
+
+        h2 {
+            text-align: left;
+        }
+        .tag-box, .class-box, .data-box {
+            margin: 10px auto;
+            padding: 15px;
+            width: 80%;
+            border-radius: 8px;
+        }
+        .tag-box {
+            background-color: #E6F7FF;
+            text-align: left;
+        }
+        .class-box {
+            background-color: #FFECB3;
+            text-align: left;
+        }
+        .data-box {
+            background-color: #E6F7FF;
+            text-align: left;
+        }
+        .highlight {
+            background-color: #FFC0CB;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the JavaScript Selectors Demo</h1>
+
+    <section>
+        <h2>Using getElementsByTagName</h2>
+        <div class="tag-box">
+            <p>This paragraph and the one below it are selected using getElementsByTagName. We apply styles and change content using JavaScript.</p>
+        </div>
+        <div class="tag-box">
+            <p>JavaScript can manipulate all paragraphs on this page by their tag name.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Using getElementsByClassName</h2>
+        <div class="class-box box">
+            This box is styled using getElementsByClassName. JavaScript is used to apply additional styles to all elements with the "box" class.
+        </div>
+        <div class="class-box box">
+            Another box with the same class name "box".
+        </div>
+    </section>
+
+    <section>
+        <h2>Using querySelector and querySelectorAll</h2>
+        <div class="data-box">
+            <p>This paragraph has a <strong>data-category</strong> attribute. We can select it using querySelector or querySelectorAll.</p>
+        </div>
+        <div class="data-box">
+            <p>This is another paragraph with a <strong>data-category</strong> attribute, indicating a warning.</p>
+        </div>
+        <button onclick="changeElements()">Toggle Highlight</button>
+    </section>
+
+    <script>
+        function changeElements() {
+            const elements = document.getElementsByTagName('p');
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
